@@ -67,6 +67,10 @@ python pipeline/api_inference.py --vendor gemini --model-id gemini-2.5-flash \
 - The study began under an earlier working title ("Specialist Routing of Multiple LLMs..."); some file headers keep it for provenance.
 - The manuscript is authoritative for all reported numbers.
 
+## License
+
+Code is released under the [MIT License](LICENSE). The aggregated results are provided for transparency and reuse with citation.
+
 ## Citation
 
 Citation details will be added on publication.
