@@ -1,0 +1,386 @@
+unit_a,unit_b,classe,n,b_a_correct_b_wrong,c_b_correct_a_wrong,mcnemar_stat,p_value,p_bonferroni,significant,p_bh,significant_bh,alpha_bonferroni,significant_bonferroni
+gemini-2-5-flash,gemini-2-5-pro,opacity,780,13,2,11.0,0.00738525390625,1.0,False,0.11861,False,0.00012987012987012987,False
+gemini-2-5-flash,gemini-2-5-pro,pneumonia,780,4,5,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gemini-2-5-pro,cardiomegaly,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gemini-2-5-pro,effusion,780,3,5,2.0,0.7265625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gemini-2-5-pro,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gemini-2-5-pro,mass,780,2,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gemini-2-5-pro,yesfinding,780,3,5,2.0,0.7265625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1-mini,opacity,780,40,4,27.8409,1.3171148394164336e-07,5.0708921317532685e-05,True,5e-05,True,0.00012987012987012987,True
+gemini-2-5-flash,gpt-4-1-mini,pneumonia,780,3,7,4.0,0.34375,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1-mini,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1-mini,effusion,780,9,7,2.0,0.803619384765625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1-mini,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1-mini,mass,780,7,2,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1-mini,yesfinding,780,11,3,8.0,0.057373046875,1.0,False,0.41487,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1,opacity,780,32,5,18.2703,1.9167534556663316e-05,0.0073795008043153,False,0.00148,True,0.00012987012987012987,True
+gemini-2-5-flash,gpt-4-1,pneumonia,780,2,6,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1,effusion,780,1,5,4.0,0.21875,1.0,False,0.88651,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1,mass,780,4,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,gpt-4-1,yesfinding,780,5,3,2.0,0.7265625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,haiku-4-5,opacity,780,31,5,17.3611,3.090859376464472e-05,0.0118998085993882,False,0.00149,True,0.00012987012987012987,True
+gemini-2-5-flash,haiku-4-5,pneumonia,780,1,4,3.0,0.375,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,haiku-4-5,cardiomegaly,780,3,0,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+gemini-2-5-flash,haiku-4-5,effusion,780,6,6,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,haiku-4-5,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,haiku-4-5,mass,780,2,2,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,haiku-4-5,yesfinding,780,9,3,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gemini-2-5-flash,sonnet-4-6,opacity,780,16,5,11.0,0.0266036987304687,1.0,False,0.25598,False,0.00012987012987012987,False
+gemini-2-5-flash,sonnet-4-6,pneumonia,780,1,7,6.0,0.0703125,1.0,False,0.45117,False,0.00012987012987012987,False
+gemini-2-5-flash,sonnet-4-6,cardiomegaly,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,sonnet-4-6,effusion,780,4,2,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,sonnet-4-6,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,sonnet-4-6,mass,780,3,2,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,sonnet-4-6,yesfinding,780,4,4,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] confidence_weighted,opacity,780,9,3,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] confidence_weighted,pneumonia,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] confidence_weighted,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] confidence_weighted,effusion,780,0,4,4.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] confidence_weighted,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] confidence_weighted,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] confidence_weighted,yesfinding,780,4,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] consensus_voting,opacity,780,24,3,14.8148,0.0001186001386622,0.0456610533849749,False,0.00304,True,0.00012987012987012987,True
+gemini-2-5-flash,[ENS] consensus_voting,pneumonia,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] consensus_voting,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] consensus_voting,effusion,780,0,4,4.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] consensus_voting,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] consensus_voting,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] consensus_voting,yesfinding,780,5,3,2.0,0.7265625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] hierarchical_decision,opacity,780,9,3,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] hierarchical_decision,pneumonia,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] hierarchical_decision,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] hierarchical_decision,effusion,780,0,4,4.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] hierarchical_decision,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] hierarchical_decision,mass,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] hierarchical_decision,yesfinding,780,4,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] specialist_routing,opacity,780,16,5,11.0,0.0266036987304687,1.0,False,0.25598,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] specialist_routing,pneumonia,780,2,6,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] specialist_routing,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] specialist_routing,effusion,780,3,5,2.0,0.7265625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] specialist_routing,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] specialist_routing,mass,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] specialist_routing,yesfinding,780,3,5,2.0,0.7265625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] weighted_consensus,opacity,780,9,3,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] weighted_consensus,pneumonia,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] weighted_consensus,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] weighted_consensus,effusion,780,0,4,4.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] weighted_consensus,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] weighted_consensus,mass,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-flash,[ENS] weighted_consensus,yesfinding,780,4,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1-mini,opacity,780,40,15,10.4727,0.0012114973654305,0.4664264856907735,False,0.02332,True,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1-mini,pneumonia,780,3,6,3.0,0.5078125,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1-mini,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1-mini,effusion,780,10,6,4.0,0.454498291015625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1-mini,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1-mini,mass,780,8,4,4.0,0.3876953125,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1-mini,yesfinding,780,13,3,10.0,0.021270751953125,1.0,False,0.24816,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1,opacity,780,31,15,4.8913,0.0269922862724022,1.0,False,0.25598,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1,pneumonia,780,2,5,3.0,0.453125,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1,effusion,780,2,4,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1,mass,780,4,4,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,gpt-4-1,yesfinding,780,7,3,4.0,0.34375,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,haiku-4-5,opacity,780,30,15,4.3556,0.0368884257070498,1.0,False,0.29588,False,0.00012987012987012987,False
+gemini-2-5-pro,haiku-4-5,pneumonia,780,4,6,2.0,0.75390625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,haiku-4-5,cardiomegaly,780,3,1,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,haiku-4-5,effusion,780,7,5,2.0,0.7744140625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,haiku-4-5,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,haiku-4-5,mass,780,3,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,haiku-4-5,yesfinding,780,11,3,8.0,0.057373046875,1.0,False,0.41487,False,0.00012987012987012987,False
+gemini-2-5-pro,sonnet-4-6,opacity,780,15,15,0.0333,0.8551321405847059,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,sonnet-4-6,pneumonia,780,0,5,5.0,0.0625,1.0,False,0.41487,False,0.00012987012987012987,False
+gemini-2-5-pro,sonnet-4-6,cardiomegaly,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,sonnet-4-6,effusion,780,5,1,4.0,0.21875,1.0,False,0.88651,False,0.00012987012987012987,False
+gemini-2-5-pro,sonnet-4-6,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,sonnet-4-6,mass,780,4,4,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,sonnet-4-6,yesfinding,780,6,4,2.0,0.75390625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] confidence_weighted,opacity,780,10,15,0.64,0.4237107971667936,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] confidence_weighted,pneumonia,780,1,6,5.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] confidence_weighted,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] confidence_weighted,effusion,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] confidence_weighted,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] confidence_weighted,mass,780,2,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] confidence_weighted,yesfinding,780,6,3,3.0,0.5078125,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] consensus_voting,opacity,780,23,13,2.25,0.1336144025377161,1.0,False,0.69393,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] consensus_voting,pneumonia,780,1,6,5.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] consensus_voting,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] consensus_voting,effusion,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] consensus_voting,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] consensus_voting,mass,780,2,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] consensus_voting,yesfinding,780,7,3,4.0,0.34375,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] hierarchical_decision,opacity,780,10,15,0.64,0.4237107971667936,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] hierarchical_decision,pneumonia,780,0,5,5.0,0.0625,1.0,False,0.41487,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] hierarchical_decision,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] hierarchical_decision,effusion,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] hierarchical_decision,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] hierarchical_decision,mass,780,1,2,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] hierarchical_decision,yesfinding,780,6,3,3.0,0.5078125,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] specialist_routing,opacity,780,15,15,0.0333,0.8551321405847059,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] specialist_routing,pneumonia,780,2,5,3.0,0.453125,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] specialist_routing,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] specialist_routing,effusion,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] specialist_routing,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] specialist_routing,mass,780,1,2,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] specialist_routing,yesfinding,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] weighted_consensus,opacity,780,10,15,0.64,0.4237107971667936,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] weighted_consensus,pneumonia,780,0,5,5.0,0.0625,1.0,False,0.41487,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] weighted_consensus,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] weighted_consensus,effusion,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] weighted_consensus,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] weighted_consensus,mass,780,1,2,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gemini-2-5-pro,[ENS] weighted_consensus,yesfinding,780,6,3,3.0,0.5078125,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,gpt-4-1,opacity,780,8,17,2.56,0.1095985833991159,1.0,False,0.6684,False,0.00012987012987012987,False
+gpt-4-1-mini,gpt-4-1,pneumonia,780,3,3,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,gpt-4-1,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,gpt-4-1,effusion,780,4,10,6.0,0.1795654296875,1.0,False,0.75195,False,0.00012987012987012987,False
+gpt-4-1-mini,gpt-4-1,pneumothorax,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,gpt-4-1,mass,780,2,6,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+gpt-4-1-mini,gpt-4-1,yesfinding,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+gpt-4-1-mini,haiku-4-5,opacity,780,6,16,10.0,0.0524787902832031,1.0,False,0.41233,False,0.00012987012987012987,False
+gpt-4-1-mini,haiku-4-5,pneumonia,780,4,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,haiku-4-5,cardiomegaly,780,3,0,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+gpt-4-1-mini,haiku-4-5,effusion,780,4,6,2.0,0.75390625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,haiku-4-5,pneumothorax,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,haiku-4-5,mass,780,1,6,5.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gpt-4-1-mini,haiku-4-5,yesfinding,780,3,5,2.0,0.7265625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,sonnet-4-6,opacity,780,4,29,17.4545,2.9425984036213212e-05,0.011329003853942,False,0.00149,True,0.00012987012987012987,True
+gpt-4-1-mini,sonnet-4-6,pneumonia,780,2,4,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,sonnet-4-6,cardiomegaly,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,sonnet-4-6,effusion,780,8,8,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,sonnet-4-6,pneumothorax,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,sonnet-4-6,mass,780,3,7,4.0,0.34375,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,sonnet-4-6,yesfinding,780,0,8,8.0,0.0078125,1.0,False,0.11861,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] confidence_weighted,opacity,780,2,32,24.7353,6.576869920893458e-07,0.0002532094919543,True,6e-05,True,0.00012987012987012987,True
+gpt-4-1-mini,[ENS] confidence_weighted,pneumonia,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] confidence_weighted,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] confidence_weighted,effusion,780,3,9,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] confidence_weighted,pneumothorax,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] confidence_weighted,mass,780,1,6,5.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] confidence_weighted,yesfinding,780,0,7,7.0,0.015625,1.0,False,0.20744,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] consensus_voting,opacity,780,2,17,15.0,0.0007286071777343,0.2805137634277344,False,0.01476,True,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] consensus_voting,pneumonia,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] consensus_voting,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] consensus_voting,effusion,780,3,9,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] consensus_voting,pneumothorax,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] consensus_voting,mass,780,1,6,5.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] consensus_voting,yesfinding,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] hierarchical_decision,opacity,780,2,32,24.7353,6.576869920893458e-07,0.0002532094919543,True,6e-05,True,0.00012987012987012987,True
+gpt-4-1-mini,[ENS] hierarchical_decision,pneumonia,780,2,4,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] hierarchical_decision,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] hierarchical_decision,effusion,780,3,9,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] hierarchical_decision,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] hierarchical_decision,mass,780,2,7,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] hierarchical_decision,yesfinding,780,0,7,7.0,0.015625,1.0,False,0.20744,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] specialist_routing,opacity,780,4,29,17.4545,2.9425984036213212e-05,0.011329003853942,False,0.00149,True,0.00012987012987012987,True
+gpt-4-1-mini,[ENS] specialist_routing,pneumonia,780,3,3,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] specialist_routing,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] specialist_routing,effusion,780,6,10,4.0,0.454498291015625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] specialist_routing,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] specialist_routing,mass,780,2,7,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] specialist_routing,yesfinding,780,3,13,10.0,0.021270751953125,1.0,False,0.24816,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] weighted_consensus,opacity,780,2,32,24.7353,6.576869920893458e-07,0.0002532094919543,True,6e-05,True,0.00012987012987012987,True
+gpt-4-1-mini,[ENS] weighted_consensus,pneumonia,780,2,4,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] weighted_consensus,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] weighted_consensus,effusion,780,3,9,6.0,0.14599609375,1.0,False,0.69393,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] weighted_consensus,pneumothorax,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] weighted_consensus,mass,780,2,7,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+gpt-4-1-mini,[ENS] weighted_consensus,yesfinding,780,0,7,7.0,0.015625,1.0,False,0.20744,False,0.00012987012987012987,False
+gpt-4-1,haiku-4-5,opacity,780,15,16,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,haiku-4-5,pneumonia,780,5,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,haiku-4-5,cardiomegaly,780,3,0,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+gpt-4-1,haiku-4-5,effusion,780,6,2,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+gpt-4-1,haiku-4-5,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,haiku-4-5,mass,780,3,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,haiku-4-5,yesfinding,780,4,0,4.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+gpt-4-1,sonnet-4-6,opacity,780,8,24,7.0312,0.00800994232988,1.0,False,0.11861,False,0.00012987012987012987,False
+gpt-4-1,sonnet-4-6,pneumonia,780,2,4,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,sonnet-4-6,cardiomegaly,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,sonnet-4-6,effusion,780,7,1,6.0,0.0703125,1.0,False,0.45117,False,0.00012987012987012987,False
+gpt-4-1,sonnet-4-6,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,sonnet-4-6,mass,780,5,5,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,sonnet-4-6,yesfinding,780,0,2,2.0,0.5,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] confidence_weighted,opacity,780,2,23,16.0,6.334248366623996e-05,0.0243868562115023,False,0.00174,True,0.00012987012987012987,True
+gpt-4-1,[ENS] confidence_weighted,pneumonia,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] confidence_weighted,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] confidence_weighted,effusion,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] confidence_weighted,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] confidence_weighted,mass,780,2,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] confidence_weighted,yesfinding,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] consensus_voting,opacity,780,7,13,6.0,0.2631759643554687,1.0,False,0.97426,False,0.00012987012987012987,False
+gpt-4-1,[ENS] consensus_voting,pneumonia,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] consensus_voting,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] consensus_voting,effusion,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] consensus_voting,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] consensus_voting,mass,780,2,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] consensus_voting,yesfinding,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] hierarchical_decision,opacity,780,2,23,16.0,6.334248366623996e-05,0.0243868562115023,False,0.00174,True,0.00012987012987012987,True
+gpt-4-1,[ENS] hierarchical_decision,pneumonia,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] hierarchical_decision,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] hierarchical_decision,effusion,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] hierarchical_decision,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] hierarchical_decision,mass,780,3,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] hierarchical_decision,yesfinding,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] specialist_routing,opacity,780,8,24,7.0312,0.00800994232988,1.0,False,0.11861,False,0.00012987012987012987,False
+gpt-4-1,[ENS] specialist_routing,pneumonia,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] specialist_routing,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] specialist_routing,effusion,780,4,2,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] specialist_routing,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] specialist_routing,mass,780,3,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] specialist_routing,yesfinding,780,3,7,4.0,0.34375,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] weighted_consensus,opacity,780,2,23,16.0,6.334248366623996e-05,0.0243868562115023,False,0.00174,True,0.00012987012987012987,True
+gpt-4-1,[ENS] weighted_consensus,pneumonia,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] weighted_consensus,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] weighted_consensus,effusion,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] weighted_consensus,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] weighted_consensus,mass,780,3,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+gpt-4-1,[ENS] weighted_consensus,yesfinding,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,sonnet-4-6,opacity,780,5,20,7.84,0.0051102606608558,1.0,False,0.08943,False,0.00012987012987012987,False
+haiku-4-5,sonnet-4-6,pneumonia,780,1,4,3.0,0.375,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,sonnet-4-6,cardiomegaly,780,0,2,2.0,0.5,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,sonnet-4-6,effusion,780,6,4,2.0,0.75390625,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,sonnet-4-6,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,sonnet-4-6,mass,780,4,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,sonnet-4-6,yesfinding,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+haiku-4-5,[ENS] confidence_weighted,opacity,780,3,23,13.8846,0.0001943831223354,0.0748375020991443,False,0.00416,True,0.00012987012987012987,False
+haiku-4-5,[ENS] confidence_weighted,pneumonia,780,1,4,3.0,0.375,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] confidence_weighted,cardiomegaly,780,0,3,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+haiku-4-5,[ENS] confidence_weighted,effusion,780,2,6,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+haiku-4-5,[ENS] confidence_weighted,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] confidence_weighted,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] confidence_weighted,yesfinding,780,0,5,5.0,0.0625,1.0,False,0.41487,False,0.00012987012987012987,False
+haiku-4-5,[ENS] consensus_voting,opacity,780,4,9,5.0,0.266845703125,1.0,False,0.97843,False,0.00012987012987012987,False
+haiku-4-5,[ENS] consensus_voting,pneumonia,780,1,4,3.0,0.375,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] consensus_voting,cardiomegaly,780,0,3,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+haiku-4-5,[ENS] consensus_voting,effusion,780,2,6,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+haiku-4-5,[ENS] consensus_voting,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] consensus_voting,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] consensus_voting,yesfinding,780,0,4,4.0,0.125,1.0,False,0.6684,False,0.00012987012987012987,False
+haiku-4-5,[ENS] hierarchical_decision,opacity,780,3,23,13.8846,0.0001943831223354,0.0748375020991443,False,0.00416,True,0.00012987012987012987,False
+haiku-4-5,[ENS] hierarchical_decision,pneumonia,780,1,4,3.0,0.375,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] hierarchical_decision,cardiomegaly,780,0,3,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+haiku-4-5,[ENS] hierarchical_decision,effusion,780,2,6,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+haiku-4-5,[ENS] hierarchical_decision,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] hierarchical_decision,mass,780,2,2,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] hierarchical_decision,yesfinding,780,0,5,5.0,0.0625,1.0,False,0.41487,False,0.00012987012987012987,False
+haiku-4-5,[ENS] specialist_routing,opacity,780,5,20,7.84,0.0051102606608558,1.0,False,0.08943,False,0.00012987012987012987,False
+haiku-4-5,[ENS] specialist_routing,pneumonia,780,4,5,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] specialist_routing,cardiomegaly,780,0,3,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+haiku-4-5,[ENS] specialist_routing,effusion,780,5,7,2.0,0.7744140625,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] specialist_routing,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] specialist_routing,mass,780,2,2,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] specialist_routing,yesfinding,780,3,11,8.0,0.057373046875,1.0,False,0.41487,False,0.00012987012987012987,False
+haiku-4-5,[ENS] weighted_consensus,opacity,780,3,23,13.8846,0.0001943831223354,0.0748375020991443,False,0.00416,True,0.00012987012987012987,False
+haiku-4-5,[ENS] weighted_consensus,pneumonia,780,1,4,3.0,0.375,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] weighted_consensus,cardiomegaly,780,0,3,3.0,0.25,1.0,False,0.93447,False,0.00012987012987012987,False
+haiku-4-5,[ENS] weighted_consensus,effusion,780,2,6,4.0,0.2890625,1.0,False,0.98486,False,0.00012987012987012987,False
+haiku-4-5,[ENS] weighted_consensus,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] weighted_consensus,mass,780,2,2,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+haiku-4-5,[ENS] weighted_consensus,yesfinding,780,0,5,5.0,0.0625,1.0,False,0.41487,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] confidence_weighted,opacity,780,2,7,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] confidence_weighted,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] confidence_weighted,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] confidence_weighted,effusion,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] confidence_weighted,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] confidence_weighted,mass,780,3,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] confidence_weighted,yesfinding,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] consensus_voting,opacity,780,13,3,10.0,0.021270751953125,1.0,False,0.24816,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] consensus_voting,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] consensus_voting,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] consensus_voting,effusion,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] consensus_voting,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] consensus_voting,mass,780,3,4,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] consensus_voting,yesfinding,780,2,0,2.0,0.5,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] hierarchical_decision,opacity,780,2,7,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] hierarchical_decision,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] hierarchical_decision,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] hierarchical_decision,effusion,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] hierarchical_decision,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] hierarchical_decision,mass,780,2,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] hierarchical_decision,yesfinding,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] specialist_routing,opacity,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] specialist_routing,pneumonia,780,4,2,2.0,0.6875,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] specialist_routing,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] specialist_routing,effusion,780,1,5,4.0,0.21875,1.0,False,0.88651,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] specialist_routing,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] specialist_routing,mass,780,2,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] specialist_routing,yesfinding,780,4,6,2.0,0.75390625,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] weighted_consensus,opacity,780,2,7,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] weighted_consensus,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] weighted_consensus,cardiomegaly,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] weighted_consensus,effusion,780,0,6,6.0,0.03125,1.0,False,0.25598,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] weighted_consensus,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] weighted_consensus,mass,780,2,3,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+sonnet-4-6,[ENS] weighted_consensus,yesfinding,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] consensus_voting,opacity,780,15,0,15.0,6.103515625e-05,0.02349853515625,False,0.00174,True,0.00012987012987012987,True
+[ENS] confidence_weighted,[ENS] consensus_voting,pneumonia,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] consensus_voting,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] consensus_voting,effusion,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] consensus_voting,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] consensus_voting,mass,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] consensus_voting,yesfinding,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] hierarchical_decision,opacity,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] hierarchical_decision,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] hierarchical_decision,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] hierarchical_decision,effusion,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] hierarchical_decision,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] hierarchical_decision,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] hierarchical_decision,yesfinding,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] specialist_routing,opacity,780,7,2,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] specialist_routing,pneumonia,780,3,1,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] specialist_routing,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] specialist_routing,effusion,780,3,1,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] specialist_routing,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] specialist_routing,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] specialist_routing,yesfinding,780,3,6,3.0,0.5078125,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] weighted_consensus,opacity,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] weighted_consensus,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] weighted_consensus,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] weighted_consensus,effusion,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] weighted_consensus,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] weighted_consensus,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] confidence_weighted,[ENS] weighted_consensus,yesfinding,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] hierarchical_decision,opacity,780,0,15,15.0,6.103515625e-05,0.02349853515625,False,0.00174,True,0.00012987012987012987,True
+[ENS] consensus_voting,[ENS] hierarchical_decision,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] hierarchical_decision,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] hierarchical_decision,effusion,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] hierarchical_decision,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] hierarchical_decision,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] hierarchical_decision,yesfinding,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] specialist_routing,opacity,780,3,13,10.0,0.021270751953125,1.0,False,0.24816,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] specialist_routing,pneumonia,780,3,1,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] specialist_routing,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] specialist_routing,effusion,780,3,1,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] specialist_routing,pneumothorax,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] specialist_routing,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] specialist_routing,yesfinding,780,3,7,4.0,0.34375,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] weighted_consensus,opacity,780,0,15,15.0,6.103515625e-05,0.02349853515625,False,0.00174,True,0.00012987012987012987,True
+[ENS] consensus_voting,[ENS] weighted_consensus,pneumonia,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] weighted_consensus,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] weighted_consensus,effusion,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] weighted_consensus,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] weighted_consensus,mass,780,1,1,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] consensus_voting,[ENS] weighted_consensus,yesfinding,780,0,1,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] specialist_routing,opacity,780,7,2,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] specialist_routing,pneumonia,780,3,1,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] specialist_routing,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] specialist_routing,effusion,780,3,1,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] specialist_routing,pneumothorax,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] specialist_routing,mass,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] specialist_routing,yesfinding,780,3,6,3.0,0.5078125,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] weighted_consensus,opacity,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] weighted_consensus,pneumonia,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] weighted_consensus,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] weighted_consensus,effusion,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] weighted_consensus,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] weighted_consensus,mass,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] hierarchical_decision,[ENS] weighted_consensus,yesfinding,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] specialist_routing,[ENS] weighted_consensus,opacity,780,2,7,5.0,0.1796875,1.0,False,0.75195,False,0.00012987012987012987,False
+[ENS] specialist_routing,[ENS] weighted_consensus,pneumonia,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] specialist_routing,[ENS] weighted_consensus,cardiomegaly,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] specialist_routing,[ENS] weighted_consensus,effusion,780,1,3,2.0,0.625,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] specialist_routing,[ENS] weighted_consensus,pneumothorax,780,1,0,1.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] specialist_routing,[ENS] weighted_consensus,mass,780,0,0,0.0,1.0,1.0,False,1.0,False,0.00012987012987012987,False
+[ENS] specialist_routing,[ENS] weighted_consensus,yesfinding,780,6,3,3.0,0.5078125,1.0,False,1.0,False,0.00012987012987012987,False

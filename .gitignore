@@ -1,0 +1,64 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
+
+# Secrets — NEVER COMMIT
+.env
+.env.local
+*.key
+api_keys.txt
+
+# Sensitive data — patient reports must NOT be committed to public repos
+data/uploads/*.xlsx
+data/outputs/*.csv
+data/outputs/*.xlsx
+responses/*.csv
+responses/*.json
+logs/*.log
+
+# Belt & suspenders: catch any patient-report xlsx/csv that lands in the
+# project root or unexpected subfolders (incident May 2026: validacao_exportada
+# files copied to repo root were nearly committed).
+*.xlsx
+*.csv
+!.env.example
+
+# --- Whitelist: aggregated model analyses (NO accession_number / MV_ IDs) ---
+# Audited 2026-05-22 — every header verified PHI-free. New files must be
+# checked the same way before adding to this list. Per-report tables
+# (predictions, ground truth, reports_master, phase_d_review, audit) stay
+# blocked by the patterns above.
+!data/outputs/metrics_*.csv
+!data/outputs/metrics_*.xlsx
+!data/outputs/final_summary_*.csv
+!data/outputs/final_summary_*.xlsx
+!data/outputs/bca_sensitivity_*.csv
+!data/outputs/bootstrap_ci_*.csv
+!data/outputs/true_token_cost.csv
+!data/outputs/ensemble_metrics_*.csv
+!data/outputs/ensemble_summary_*.xlsx
+!data/outputs/mcnemar_grid_*.csv
+!data/outputs/non_inferiority_*.csv
+!data/outputs/paired_delta_*.csv
+!data/outputs/routing_stability_*.csv
+!data/outputs/sens_spec_ci_*.csv
+!data/outputs/tost_*.csv
+!data/outputs/specialist_routing_*.json
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

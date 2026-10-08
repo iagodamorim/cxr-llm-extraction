@@ -1,0 +1,4 @@
+test,h1,delta_point,ci_lo_two_sided,ci_hi_two_sided,p_value,alpha,decision,n_boot,n
+superiority,delta > 0,0.0108,-0.0071,0.0287,0.111,0.05,not supported,10000,780
+non_inferiority,delta > -0.05,0.0108,-0.0071,0.0287,0.0,0.05,supported,10000,780
+equivalence_TOST,|delta| < 0.05,0.0108,-0.0071,0.0287,0.0001,0.05,supported,10000,780

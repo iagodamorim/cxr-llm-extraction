@@ -1,0 +1,489 @@
+# =============================================================================
+# cxr_prompt_v4.yaml  --  prompt of record for the Phase B pilot (N=295 dev)
+#                        and Phase C full study (N=1075).
+#
+# Manuscript: D'Amorim et al., "Specialist Routing of Multiple Large Language
+# Models for Structured Extraction of Clinical Findings from Portuguese Chest
+# Radiograph Reports." Target: Radiology: Artificial Intelligence.
+#
+# v4 supersedes v3 following the schema-simplification decision of May 2026,
+# in which:
+#   - The class schema was reduced from 8 to 7 classes by ELIMINATING the
+#     separate `consolidation` class. Pneumonia is now an explicit subset of
+#     opacity (the umbrella class). Rationale: removing the redundant
+#     middle layer in the hierarchy (opacity > consolidation > pneumonia)
+#     reduces artificial correlation between classes, preserves alignment
+#     with the Castilla 2025 TRIA system, and enables full reuse of the v1
+#     ground-truth annotations (bacterial_pneumonia simply renames to
+#     pneumonia with broadened scope).
+#   - The pneumonia definition was broadened beyond strictly bacterial to
+#     include viral, atypical, interstitial, fungal, and any explicitly
+#     framed pneumonic process. Brazilian Portuguese terminology was
+#     enriched and a new in-context example covers interstitial pneumonia
+#     (COVID-era / atypical patterns).
+#   - The hierarchy `pneumonia = 1 ENTAILS opacity = 1` is now stated
+#     explicitly in the class definition, preventing the logical
+#     contradiction observed in some preliminary v1 outputs.
+#   - A new rule (Rule 6, "non-mention") explicitly handles the implicit
+#     assumption that unmentioned findings are absent. This reduces
+#     hallucination risk on terse reports.
+#   - An exception was added to the uncertainty rule (Rule 7) for
+#     high-stakes findings (mass, pneumothorax), where under-detection is
+#     clinically costlier than over-detection.
+#   - One in-context example now demonstrates a populated
+#     `abnormalities_found` field (previously always empty).
+#
+# Sub-version history:
+#   v4.0 (2026-05-18): initial 7-class prompt.
+#   v4.1 (2026-05-18): cosmetic cleanups.
+#   v4.2 (2026-05-18): overfitting audit — removed the data-derived
+#       "velamento -> opacity not effusion" rule from the effusion class
+#       definition (and the corresponding "velamento" cue from opacity),
+#       which had been added after observing one specific FP annotation
+#       on the development cohort. Added Example 6 (a worked
+#       case for Rule 7b: high-stakes finding under uncertainty) so the
+#       asymmetric handling of mass and pneumothorax is grounded by a
+#       concrete demonstration rather than text only.
+#
+# Authors: I.P. D'Amorim (lead), M.A. Esmeraldo, M.V.Y. Sawamura,
+#          A.C. Castilla. Prompt finalized: May 2026.
+# =============================================================================
+
+metadata:
+  prompt_version: "v4.2"
+  derived_from: "cxr_prompt_v3.yaml + schema-simplification (May 2026); v4.2 strips data-derived rules per overfitting audit and adds Example 6 (Rule 7b worked case)"
+  intended_use: "Phase B pilot (N=295 dev) + Phase C full study (N=1075)"
+  language_of_reports: "Brazilian Portuguese"
+  language_of_prompt: "English"
+  expected_output_format: "JSON object only; no markdown, no explanatory text"
+  temperature: 0
+  number_of_classes: 7
+  classes: ["opacity", "pneumonia", "cardiomegaly", "effusion",
+            "pneumothorax", "mass", "yesfinding"]
+  hierarchy_note: "pneumonia is a subset of opacity (umbrella). When pneumonia=1, opacity MUST be 1."
+
+templates:
+
+  cxr.intro:
+    template: 'INTRODUCTION:
+      You are an expert thoracic radiologist analyzing chest radiograph
+      reports written in Brazilian Portuguese. Your task is to extract a
+      structured set of clinical findings from each report and emit them
+      as a single JSON object, following the rules and class definitions
+      below. You must follow the rules exactly; do not add, remove, or
+      reorder keys.'
+
+  cxr.rules:
+    template: 'RULES:
+      1- Respond ONLY with a valid JSON object. No prose, no markdown, no
+         code fences, no explanatory text before or after the JSON.
+      2- For each class, set the "presence" value to "1" if the finding is
+         currently present on the chest radiograph as described in the
+         report, otherwise "0".
+      3- Use DOUBLE QUOTES for all keys and string values. Numeric values
+         such as "0" and "1" are encoded as strings to match the schema.
+      4- A finding described as resolved, absent, negative, normal, or
+         explicitly excluded is encoded as "0", regardless of the order in
+         which it appears in the report. This rule applies to all classes
+         and to yesfinding.
+      5- A finding mentioned only in clinical history, patient context, or
+         indication (e.g., "history of pneumothorax", "previous nodule",
+         "antecedente de pneumonia") and NOT confirmed on the current
+         radiograph is encoded as "0". Do not infer findings from history
+         or demographics alone.
+      6- A finding NOT mentioned in the report is encoded as "0". Do not
+         infer the presence of cardiomegaly, opacity, or any other class
+         from clinical context, age, comorbidities, or imaging indication.
+         Only report what the text describes about the current radiograph.
+      7- A finding that is uncertain in the report (e.g., "suspeita de
+         opacidade", "nao se pode excluir derrame") is encoded based on
+         clinical stakes:
+            (a) DEFAULT: encode as "1" if the report explicitly raises it
+                as a current radiological possibility, "0" otherwise. When
+                in doubt, prefer "0".
+            (b) EXCEPTION for high-stakes findings (mass, pneumothorax):
+                if the report explicitly raises the possibility, ALWAYS
+                encode as "1". Under-detection of these findings is
+                clinically costlier than over-detection.
+      8- For yesfinding, set "1" if AND ONLY IF at least one of classes
+         1-6 is "1", OR the report describes a currently present
+         intrathoracic abnormality not covered by those six classes
+         (e.g., atelectasis, hyperinflation, cavitation, hilar
+         enlargement, mediastinal abnormality, septal lines, edema,
+         fibrosis-related changes when isolated). When yesfinding = "1"
+         is driven by an unlisted intrathoracic abnormality, that
+         abnormality MUST be listed in the "abnormalities_found" field
+         in Brazilian Portuguese.
+      9- IGNORE non-intrathoracic findings: bones, soft tissues, chest
+         wall, spine, support devices (catheters, tubes, lines,
+         pacemakers, drains), surgical clips, post-surgical sequelae of
+         the chest wall, and any extrathoracic structure. None of these
+         justify yesfinding = "1".'
+
+  cxr.classes:
+    template: 'CLASSES (7 total; hierarchy: pneumonia is a subset of opacity):
+
+      1. opacity -- UMBRELLA class. ANY pulmonary opacity, regardless of
+         pattern or etiology. Includes alveolar opacities (consolidation,
+         pneumonia of any etiology), interstitial opacities (reticular,
+         reticulonodular, fibrotic, septal lines), ground-glass opacities,
+         and post-procedural opacifications (post-radiation, hemorrhagic,
+         atelectasis-related). When pneumonia is "1", opacity MUST also
+         be "1" (pneumonia is radiologically always a form of opacity).
+         Brazilian-Portuguese cues: "opacidade", "consolidacao",
+         "infiltrado", "padrao intersticial", "padrao reticular",
+         "vidro fosco", "fibrose pulmonar", "preenchimento alveolar",
+         "broncograma aereo".
+
+      2. cardiomegaly -- enlargement of the cardiac silhouette, as
+         indicated by increased cardiothoracic index, explicit mention
+         of cardiomegaly, or descriptive language consistent with heart
+         enlargement.
+         Brazilian-Portuguese cues: "cardiomegalia", "indice
+         cardiotoracico aumentado", "area cardiaca aumentada",
+         "ICT > 0.5", "aumento da silhueta cardiaca".
+
+      3. effusion -- pleural effusion of any volume, including small,
+         loculated, encysted, or fissural effusion. A blunted costophrenic
+         angle described as suggestive of effusion is "1".
+         Brazilian-Portuguese cues: "derrame pleural", "espessamento
+         pleural com derrame", "liquido em cavidade pleural", "derrame
+         encistado", "derrame fissural".
+
+      4. pneumothorax -- presence of pneumothorax (residual, partial,
+         or full).
+         Brazilian-Portuguese cues: "pneumotorax", "ar em cavidade
+         pleural", "linha pleural visivel", "colabamento parcial do
+         pulmao por pneumotorax", "pneumotorax residual",
+         "pneumotorax laminar".
+
+      5. mass -- pulmonary nodule or mass; includes solitary or multiple
+         lesions described as nodular, mass-like, or pseudonodular.
+         Excludes calcified granulomas described as residual / stable
+         unless explicitly characterized as a current nodule or mass.
+         Brazilian-Portuguese cues: "nodulo pulmonar", "massa pulmonar",
+         "imagem nodular", "lesao expansiva", "formacao nodular",
+         "imagem ovalada com densidade de partes moles".
+
+      6. pneumonia -- pneumonia diagnosis or explicit infectious framing
+         in the report. The report must contain clear linguistic markers
+         of a pneumonic interpretation. Definition is BROAD: includes
+         bacterial, viral, atypical, interstitial, fungal, and
+         opportunistic pneumonias. When pneumonia = "1", opacity MUST
+         also be "1" by hierarchical entailment.
+         Brazilian-Portuguese qualifying language (NOT exhaustive):
+         "pneumonia", "pneumonia comunitaria", "pneumonia hospitalar",
+         "pneumonia atipica", "pneumonia viral", "pneumonia
+         intersticial", "broncopneumonia", "pneumocistose", "PCP", "PJP",
+         "processo pneumonico", "infiltrado pneumonico", "compativel com
+         pneumonia", "sugestivo de pneumonia", "achados compativeis com
+         pneumonia", "consolidacao pneumonica", "PNM".
+         Examples of language that does NOT qualify as pneumonia by
+         itself: descriptive "consolidacao" without infectious framing
+         (e.g., "consolidacao post-toracotomia"), isolated "opacidade",
+         "atelectasia", "fibrose", "edema".
+
+      7. yesfinding -- composite indicator (see rule 8). The
+         "abnormalities_found" string lists, in Brazilian Portuguese,
+         any intrathoracic abnormality present in the report that is
+         NOT already captured by classes 1-6 (e.g., "atelectasia
+         laminar a direita", "edema intersticial", "linhas B de Kerley",
+         "hiperinsuflacao", "hilo proeminente"). Leave the string
+         EMPTY ("") if all intrathoracic abnormalities are already
+         covered by classes 1-6.'
+
+  cxr.output:
+    template: 'OUTPUT SCHEMA (exact key order and casing; do not add or
+      reorder keys):
+      {
+        "exam_type": "",
+        "findings": [
+          {"presence": "0", "class_name": "opacity"},
+          {"presence": "0", "class_name": "pneumonia"},
+          {"presence": "0", "class_name": "cardiomegaly"},
+          {"presence": "0", "class_name": "effusion"},
+          {"presence": "0", "class_name": "pneumothorax"},
+          {"presence": "0", "class_name": "mass"},
+          {"presence": "0", "class_name": "yesfinding",
+           "abnormalities_found": ""}
+        ]
+      }'
+
+  cxr.examples:
+    template: 'EXAMPLES (6 reference cases; follow exactly):
+
+      --- Example 1: cardiomegaly only (ignore support device) ---
+      Report:
+        RADIOGRAFIAS DO TORAX (FRENTE E PERFIL)
+        ANALISE:
+        Dispositivo subcutaneo de infusao medicamentosa com extremidade
+        na VCSAD.
+        Aspecto normal das partes moles. Arcaboucos osseo sem
+        particularidades.
+        Seios costofrenicos livres. Parenquima pulmonar com transparencia
+        preservada.
+        Indice cardiotoracico aumentado. Aorta normal.
+        CONCLUSAO: Cardiomegalia.
+      Expected JSON:
+        {
+          "exam_type": "RADIOGRAFIAS DO TORAX (FRENTE E PERFIL)",
+          "findings": [
+            {"presence": "0", "class_name": "opacity"},
+            {"presence": "0", "class_name": "pneumonia"},
+            {"presence": "1", "class_name": "cardiomegaly"},
+            {"presence": "0", "class_name": "effusion"},
+            {"presence": "0", "class_name": "pneumothorax"},
+            {"presence": "0", "class_name": "mass"},
+            {"presence": "1", "class_name": "yesfinding",
+             "abnormalities_found": ""}
+          ]
+        }
+      Rationale: cardiomegaly = 1 -> yesfinding = 1 (rule 8). The
+      subcutaneous infusion device is a support device and is IGNORED
+      (rule 9). abnormalities_found is empty since cardiomegaly is
+      already a listed class.
+
+      --- Example 2: fully resolved condition (normal chest now) ---
+      Report:
+        RADIOGRAFIAS DO TORAX (FRENTE E PERFIL)
+        ANALISE:
+        Aspecto normal das partes moles. Arcaboucos osseo sem
+        particularidades.
+        Seios costofrenicos livres. Parenquima pulmonar com transparencia
+        preservada.
+        Indice cardiotoracico normal. Aorta normal.
+        CONCLUSAO: Torax normal. Resolucao completa do pneumotorax a
+        direita.
+      Expected JSON:
+        {
+          "exam_type": "RADIOGRAFIAS DO TORAX (FRENTE E PERFIL)",
+          "findings": [
+            {"presence": "0", "class_name": "opacity"},
+            {"presence": "0", "class_name": "pneumonia"},
+            {"presence": "0", "class_name": "cardiomegaly"},
+            {"presence": "0", "class_name": "effusion"},
+            {"presence": "0", "class_name": "pneumothorax"},
+            {"presence": "0", "class_name": "mass"},
+            {"presence": "0", "class_name": "yesfinding",
+             "abnormalities_found": ""}
+          ]
+        }
+      Rationale: pneumothorax described as completely resolved (rule 4);
+      current chest is normal. All classes = 0; yesfinding = 0.
+
+      --- Example 3: opacity WITHOUT pneumonia (post-procedural) ---
+      Report:
+        RADIOGRAFIA DO TORAX FRENTE
+        ANALISE:
+        Status pos-toracotomia direita. Consolidacao alveolar laminar
+        em apice direito, em provavel associacao ao procedimento
+        cirurgico recente, sem sinais de complicacoes infecciosas.
+        Demais campos pulmonares com transparencia preservada.
+        Seios costofrenicos livres. Indice cardiotoracico normal.
+      Expected JSON:
+        {
+          "exam_type": "RADIOGRAFIA DO TORAX FRENTE",
+          "findings": [
+            {"presence": "1", "class_name": "opacity"},
+            {"presence": "0", "class_name": "pneumonia"},
+            {"presence": "0", "class_name": "cardiomegaly"},
+            {"presence": "0", "class_name": "effusion"},
+            {"presence": "0", "class_name": "pneumothorax"},
+            {"presence": "0", "class_name": "mass"},
+            {"presence": "1", "class_name": "yesfinding",
+             "abnormalities_found": ""}
+          ]
+        }
+      Rationale: focal alveolar consolidation present -> opacity = 1.
+      Etiology is post-surgical and infection is explicitly excluded
+      ("sem sinais de complicacoes infecciosas"), so pneumonia = 0.
+      yesfinding = 1 via opacity. abnormalities_found is empty since
+      the consolidation is captured by opacity.
+
+      --- Example 4: pneumonia (alveolar, explicit infectious framing) ---
+      Report:
+        RADIOGRAFIA DO TORAX FRENTE
+        ANALISE:
+        Consolidacao alveolar em base direita com broncogramas aereos,
+        de aspecto homogeneo, sugestiva de processo pneumonico em
+        paciente febril.
+        Demais campos pulmonares com transparencia preservada.
+        Seios costofrenicos livres. Indice cardiotoracico normal.
+        CONCLUSAO: Consolidacao em base direita, compativel com
+        pneumonia.
+      Expected JSON:
+        {
+          "exam_type": "RADIOGRAFIA DO TORAX FRENTE",
+          "findings": [
+            {"presence": "1", "class_name": "opacity"},
+            {"presence": "1", "class_name": "pneumonia"},
+            {"presence": "0", "class_name": "cardiomegaly"},
+            {"presence": "0", "class_name": "effusion"},
+            {"presence": "0", "class_name": "pneumothorax"},
+            {"presence": "0", "class_name": "mass"},
+            {"presence": "1", "class_name": "yesfinding",
+             "abnormalities_found": ""}
+          ]
+        }
+      Rationale: focal alveolar consolidation with explicit pneumonia
+      interpretation -> opacity = 1 AND pneumonia = 1 (hierarchical
+      entailment). yesfinding = 1.
+
+      --- Example 5: pneumonia INTERSTITIAL (viral/atypical pattern)
+                     + abnormalities_found populated ---
+      Report:
+        RADIOGRAFIA DO TORAX FRENTE
+        ANALISE:
+        Opacidades em vidro fosco bilaterais, perifericas, com
+        predominio em bases pulmonares, associadas a discreto edema
+        intersticial. Achados compativeis com pneumonia viral.
+        Sem consolidacoes lobares, sem derrame pleural.
+        Seios costofrenicos livres. Indice cardiotoracico normal.
+        CONCLUSAO: Padrao em vidro fosco bilateral compativel com
+        pneumonia viral; edema intersticial associado.
+      Expected JSON:
+        {
+          "exam_type": "RADIOGRAFIA DO TORAX FRENTE",
+          "findings": [
+            {"presence": "1", "class_name": "opacity"},
+            {"presence": "1", "class_name": "pneumonia"},
+            {"presence": "0", "class_name": "cardiomegaly"},
+            {"presence": "0", "class_name": "effusion"},
+            {"presence": "0", "class_name": "pneumothorax"},
+            {"presence": "0", "class_name": "mass"},
+            {"presence": "1", "class_name": "yesfinding",
+             "abnormalities_found": "edema intersticial bilateral"}
+          ]
+        }
+      Rationale: ground-glass opacities + explicit viral pneumonia
+      framing -> opacity = 1 (umbrella covers ground-glass) AND
+      pneumonia = 1 (broad definition includes viral/atypical
+      patterns; hierarchical entailment requires opacity = 1).
+      The associated interstitial edema is an intrathoracic
+      abnormality NOT captured by classes 1-6, so it is reported in
+      abnormalities_found (rules 8 and the class 7 definition).
+      yesfinding = 1.
+
+      --- Example 6: high-stakes finding under uncertainty
+                     (Rule 7b exception for mass / pneumothorax) ---
+      Report:
+        RADIOGRAFIA DO TORAX FRENTE
+        ANALISE:
+        Imagem ovalada de aproximadamente 1,5 cm no terco medio do
+        hemitorax direito, de dificil caracterizacao nesta projecao,
+        sem outras alteracoes pulmonares.
+        Seios costofrenicos livres. Indice cardiotoracico normal.
+        CONCLUSAO: Nodulo pulmonar de dificil caracterizacao a direita.
+        Sugerimos correlacao com TC de torax.
+      Expected JSON:
+        {
+          "exam_type": "RADIOGRAFIA DO TORAX FRENTE",
+          "findings": [
+            {"presence": "0", "class_name": "opacity"},
+            {"presence": "0", "class_name": "pneumonia"},
+            {"presence": "0", "class_name": "cardiomegaly"},
+            {"presence": "0", "class_name": "effusion"},
+            {"presence": "0", "class_name": "pneumothorax"},
+            {"presence": "1", "class_name": "mass"},
+            {"presence": "1", "class_name": "yesfinding",
+             "abnormalities_found": ""}
+          ]
+        }
+      Rationale: nodular image explicitly raised as a current
+      radiological possibility, even though characterization is
+      uncertain. Per Rule 7(b), high-stakes findings (mass,
+      pneumothorax) are encoded as "1" when the report explicitly
+      raises them as a current radiological finding, even under
+      uncertainty. opacity = 0 because the nodular image is
+      characterized as a discrete nodule, not as a pulmonary opacity
+      pattern (umbrella covers parenchymal opacities, not nodules).
+      yesfinding = 1 follows from mass. abnormalities_found is empty
+      since mass is a listed class.'
+
+  cxr.content:
+    input_variables: ["report"]
+    template: 'REPORT:
+      {report}'
+
+
+# =============================================================================
+# SUMMARY OF CHANGES v3 -> v4
+# =============================================================================
+#
+# Substantive structural change:
+#   - Schema reduced from 8 to 7 classes by ELIMINATING `consolidation` as a
+#     separate class. Consolidations now fall under `opacity` (umbrella).
+#     This removes one level of the hierarchy (was opacity > consolidation
+#     > pneumonia; now opacity > pneumonia), reducing artificial correlation
+#     between classes and matching the Castilla 2025 TRIA system.
+#   - Pneumonia definition explicitly broadened beyond bacterial: bacterial,
+#     viral, atypical, interstitial, fungal, opportunistic. All require
+#     explicit pneumonic framing in the report.
+#   - Hierarchical entailment "pneumonia = 1 -> opacity = 1" stated
+#     explicitly in both the class definition and Rules.
+#
+# New rules:
+#   - Rule 6 (non-mention -> 0): explicit guardrail against hallucinating
+#     findings from clinical context.
+#   - Rule 7 (uncertainty handling): now has an EXCEPTION clause for
+#     high-stakes findings (mass, pneumothorax) where under-detection is
+#     clinically costlier than over-detection.
+#
+# Refined rules:
+#   - Rule 8 (yesfinding): explicit requirement that the
+#     abnormalities_found field MUST list any unlisted intrathoracic
+#     abnormality that drove yesfinding = "1".
+#   - Rule 9 (ignore non-intrathoracic): extended list of items to ignore
+#     (drains, post-surgical chest-wall sequelae).
+#
+# Refined class definitions:
+#   - effusion: explicit handling of "velamento do seio costofrenico"
+#     without effusion framing -> route to opacity instead. Addresses the
+#     v1 error class observed during manual annotation of the dev cohort.
+#   - mass: excludes residual calcified granulomas unless characterized
+#     as a current finding.
+#   - pneumonia: BRAX-aligned terminology, with broad pneumonia coverage
+#     and explicit examples of qualifying / non-qualifying language.
+#
+# Examples:
+#   - Example 3 rewritten: opacity post-procedural WITHOUT pneumonia
+#     (replaces v3 consolidation example with explicit opacity routing).
+#   - Example 4 simplified: alveolar pneumonia, removes consolidation as
+#     a separate class.
+#   - Example 5 NEW: interstitial / viral pneumonia + populated
+#     abnormalities_found field. Covers the COVID-era atypical patterns
+#     and demonstrates the abnormalities_found mechanism for unlisted
+#     findings (edema intersticial).
+#
+# Operational changes:
+#   - Metadata block updated: version v4.0, 7 classes, hierarchy note.
+#   - Removed accent marks from worked examples where likely to cause
+#     parsing issues across LLM tokenizers; kept accent marks in
+#     descriptive prose. (LLMs handle accented Portuguese well, but
+#     copy-paste fidelity in the prompt file improves with ASCII fallback
+#     in code-style content.)
+#
+# Expected impact:
+#   - Higher pneumonia F1 vs v1 prelim (0.457): broader definition and
+#     better Brazilian-Portuguese coverage should capture more positive
+#     cases; explicit examples should reduce false positives on
+#     post-procedural consolidations.
+#   - Higher yesfinding consistency: explicit non-mention rule and
+#     entailment hierarchy reduce the v1 inconsistency observed between
+#     rule 8 wording and class definitions.
+#   - opacity, cardiomegaly, effusion, mass, pneumothorax: expected to
+#     match or exceed v1 performance.
+#
+# Methodological notes:
+#   - Per the PAP v2.1, the prompt v4 is LOCKED prior to any inference.
+#     Any change after Phase B pilot must be a documented protocol
+#     amendment.
+#   - Per MI-CLEAR-LLM Item 3, the full prompt is released as
+#     supplementary material verbatim.
+#   - Per MI-CLEAR-LLM Item 5, the prompt was iteratively refined during
+#     methodology development (v1 -> v2 draft -> v3 8-class -> v4
+#     7-class). All versions are preserved in the repository.
+#   - Per MI-CLEAR-LLM Item 6, the Specialist Routing assignment is
+#     derived on the 295-report development split (ECR cohort), disjoint
+#     from the 780-report test split where final metrics are reported.
+# =============================================================================

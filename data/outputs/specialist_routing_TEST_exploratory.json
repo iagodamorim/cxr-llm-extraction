@@ -1,0 +1,320 @@
+{
+  "schema": "v4 (7-class)",
+  "decision_basis": "test split, N=780 — WARNING: routing decision on test violates PAP v2.1 (oracle/overfit). Use only as exploratory comparison.",
+  "split": "test",
+  "generated_at": "2026-05-19T19:32:19.281844+00:00",
+  "pap_version": "v2.1",
+  "tie_break": "alphabetical vendor name (stable)",
+  "vendors_considered": [
+    "gemini-2-5-flash",
+    "gemini-2-5-pro",
+    "gpt-4-1-mini",
+    "gpt-4-1",
+    "haiku-4-5",
+    "sonnet-4-6"
+  ],
+  "assignment": {
+    "opacity": "gemini-2-5-flash",
+    "pneumonia": "sonnet-4-6",
+    "cardiomegaly": "gemini-2-5-flash",
+    "effusion": "gpt-4-1",
+    "pneumothorax": "gemini-2-5-flash",
+    "mass": "gemini-2-5-flash",
+    "yesfinding": "gemini-2-5-pro"
+  },
+  "assignment_detail": {
+    "opacity": {
+      "best_vendor": "gemini-2-5-flash",
+      "best_f1": 0.966,
+      "ties": [],
+      "ranking": [
+        [
+          "gemini-2-5-flash",
+          0.966
+        ],
+        [
+          "gemini-2-5-pro",
+          0.9293
+        ],
+        [
+          "sonnet-4-6",
+          0.9247
+        ],
+        [
+          "haiku-4-5",
+          0.8647
+        ],
+        [
+          "gpt-4-1",
+          0.8645
+        ],
+        [
+          "gpt-4-1-mini",
+          0.8189
+        ]
+      ]
+    },
+    "pneumonia": {
+      "best_vendor": "sonnet-4-6",
+      "best_f1": 0.9268,
+      "ties": [],
+      "ranking": [
+        [
+          "sonnet-4-6",
+          0.9268
+        ],
+        [
+          "gpt-4-1",
+          0.8718
+        ],
+        [
+          "gpt-4-1-mini",
+          0.8649
+        ],
+        [
+          "haiku-4-5",
+          0.8571
+        ],
+        [
+          "gemini-2-5-pro",
+          0.8261
+        ],
+        [
+          "gemini-2-5-flash",
+          0.8
+        ]
+      ]
+    },
+    "cardiomegaly": {
+      "best_vendor": "gemini-2-5-flash",
+      "best_f1": 1.0,
+      "ties": [
+        "gemini-2-5-flash",
+        "gpt-4-1-mini",
+        "gpt-4-1"
+      ],
+      "ranking": [
+        [
+          "gemini-2-5-flash",
+          1.0
+        ],
+        [
+          "gpt-4-1",
+          1.0
+        ],
+        [
+          "gpt-4-1-mini",
+          1.0
+        ],
+        [
+          "gemini-2-5-pro",
+          0.9967
+        ],
+        [
+          "sonnet-4-6",
+          0.9967
+        ],
+        [
+          "haiku-4-5",
+          0.99
+        ]
+      ]
+    },
+    "effusion": {
+      "best_vendor": "gpt-4-1",
+      "best_f1": 0.9735,
+      "ties": [],
+      "ranking": [
+        [
+          "gpt-4-1",
+          0.9735
+        ],
+        [
+          "gemini-2-5-pro",
+          0.9641
+        ],
+        [
+          "gemini-2-5-flash",
+          0.9534
+        ],
+        [
+          "haiku-4-5",
+          0.9529
+        ],
+        [
+          "sonnet-4-6",
+          0.9442
+        ],
+        [
+          "gpt-4-1-mini",
+          0.9405
+        ]
+      ]
+    },
+    "pneumothorax": {
+      "best_vendor": "gemini-2-5-flash",
+      "best_f1": 0.9859,
+      "ties": [
+        "gemini-2-5-flash",
+        "gemini-2-5-pro"
+      ],
+      "ranking": [
+        [
+          "gemini-2-5-flash",
+          0.9859
+        ],
+        [
+          "gemini-2-5-pro",
+          0.9859
+        ],
+        [
+          "gpt-4-1-mini",
+          0.9722
+        ],
+        [
+          "gpt-4-1",
+          0.9714
+        ],
+        [
+          "haiku-4-5",
+          0.9714
+        ],
+        [
+          "sonnet-4-6",
+          0.9714
+        ]
+      ]
+    },
+    "mass": {
+      "best_vendor": "gemini-2-5-flash",
+      "best_f1": 0.8571,
+      "ties": [
+        "gemini-2-5-flash",
+        "haiku-4-5"
+      ],
+      "ranking": [
+        [
+          "gemini-2-5-flash",
+          0.8571
+        ],
+        [
+          "haiku-4-5",
+          0.8571
+        ],
+        [
+          "sonnet-4-6",
+          0.8462
+        ],
+        [
+          "gemini-2-5-pro",
+          0.84
+        ],
+        [
+          "gpt-4-1",
+          0.8095
+        ],
+        [
+          "gpt-4-1-mini",
+          0.75
+        ]
+      ]
+    },
+    "yesfinding": {
+      "best_vendor": "gemini-2-5-pro",
+      "best_f1": 0.9862,
+      "ties": [],
+      "ranking": [
+        [
+          "gemini-2-5-pro",
+          0.9862
+        ],
+        [
+          "gemini-2-5-flash",
+          0.9831
+        ],
+        [
+          "sonnet-4-6",
+          0.9829
+        ],
+        [
+          "gpt-4-1",
+          0.9798
+        ],
+        [
+          "haiku-4-5",
+          0.9734
+        ],
+        [
+          "gpt-4-1-mini",
+          0.9702
+        ]
+      ]
+    }
+  },
+  "gate": {
+    "per_vendor": {
+      "gemini-2-5-flash": {
+        "macro_f1": 0.9351,
+        "macro_f1_pass": true,
+        "pneumonia_f1": 0.8,
+        "pneumonia_pass": true,
+        "parse_ok": 1.0,
+        "parse_ok_pass": true,
+        "all_pass": true
+      },
+      "gemini-2-5-pro": {
+        "macro_f1": 0.9326,
+        "macro_f1_pass": true,
+        "pneumonia_f1": 0.8261,
+        "pneumonia_pass": true,
+        "parse_ok": 1.0,
+        "parse_ok_pass": true,
+        "all_pass": true
+      },
+      "gpt-4-1-mini": {
+        "macro_f1": 0.9024,
+        "macro_f1_pass": true,
+        "pneumonia_f1": 0.8649,
+        "pneumonia_pass": true,
+        "parse_ok": 1.0,
+        "parse_ok_pass": true,
+        "all_pass": true
+      },
+      "gpt-4-1": {
+        "macro_f1": 0.9244,
+        "macro_f1_pass": true,
+        "pneumonia_f1": 0.8718,
+        "pneumonia_pass": true,
+        "parse_ok": 1.0,
+        "parse_ok_pass": true,
+        "all_pass": true
+      },
+      "haiku-4-5": {
+        "macro_f1": 0.9238,
+        "macro_f1_pass": true,
+        "pneumonia_f1": 0.8571,
+        "pneumonia_pass": true,
+        "parse_ok": 1.0,
+        "parse_ok_pass": true,
+        "all_pass": true
+      },
+      "sonnet-4-6": {
+        "macro_f1": 0.9418,
+        "macro_f1_pass": true,
+        "pneumonia_f1": 0.9268,
+        "pneumonia_pass": true,
+        "parse_ok": 1.0,
+        "parse_ok_pass": true,
+        "all_pass": true
+      }
+    },
+    "overall_go": true
+  },
+  "thresholds": {
+    "macro_f1_min": 0.8,
+    "pneumonia_f1_min": 0.65,
+    "parse_ok_min": 0.98
+  },
+  "locked": true,
+  "note": "This assignment, once locked, must be used as-is for Phase C (test split) per PAP v2.1. Any change is a protocol amendment."
+}
